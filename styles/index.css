@@ -1,0 +1,138 @@
+:root {
+    --primary-blue: #1a4d8c;
+    --secondary-blue: #4a90e2;
+    --soft-cream: #fdfaf0;
+    --warm-cream: #f5e6ca;
+    --text-dark: #2c3e50;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--soft-cream);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+header img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--warm-cream);
+    margin-bottom: 1rem;
+}
+
+.lead {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.cta-section {
+    padding: 50px 20px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+}
+
+.cta-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-card {
+    background: var(--white);
+    border: 1px solid var(--warm-cream);
+    border-radius: 15px;
+    padding: 30px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.cta-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-blue);
+}
+
+.cta-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.cta-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: var(--primary-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-blue);
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.card h2 {
+    color: var(--primary-blue);
+    border-left: 5px solid var(--warm-cream);
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: var(--primary-blue);
+    color: var(--soft-cream);
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .title { font-size: 2rem; }
+    header img { height: 350px; }
+}
