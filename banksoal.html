@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Soal - KM SMPN 27 Makassar</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .sub-header {
+            background: linear-gradient(135deg, #1e3c72, #1a4d8c);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .back-link {
+            color: #bcd4ff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        /* Search & Filter */
+        .search-container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-top: -30px;
+            margin-bottom: 30px;
+            display: flex;
+            gap: 10px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        /* Grid Soal */
+        .soal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .soal-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            position: relative;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border-top: 5px solid #2a5298;
+        }
+
+        .soal-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tag-soal {
+            font-size: 0.7rem;
+            font-weight: bold;
+            padding: 5px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .tag-literasi { background: #fff3e0; color: #e65100; }
+        .tag-numerasi { background: #e8f5e9; color: #2e7d32; }
+
+        .soal-card h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #1e3c72;
+        }
+
+        .soal-card p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .info-soal {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .btn-kerjakan {
+            background-color: #2a5298;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-kerjakan:hover {
+            background-color: #1e3c72;
+            box-shadow: 0 4px 8px rgba(42, 82, 152, 0.3);
+        }
+
+        .jml-soal {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .search-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="sub-header">
+        <div class="container">
+            <h1>Bank Soal Asesmen</h1>
+            <p>Uji kemampuan Literasi dan Numerasimu di sini!</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Cari topik soal (misal: Aljabar, Puisi...)" onkeyup="searchSoal()">
+            <button class="btn-kerjakan" style="padding: 12px 25px;"><i class="bi bi-search"></i></button>
+        </div>
+
+        <section class="soal-grid" id="soalList">
+            <article class="soal-card">
+                <span class="tag-soal tag-numerasi">Numerasi</span>
+                <h3>Pola Bilangan & Barisan</h3>
+                <p>Latihan soal mengenai pola bilangan bertingkat dan deret geometri dalam kehidupan sehari-hari.</p>
+                <div class="info-soal">
+                    <span class="jml-soal"><i class="bi bi-list-check"></i> 15 Soal</span>
+                    <a href="#" class="btn-kerjakan">Mulai</a>
+                </div>
+            </article>
+
+            <article class="soal-card">
+                <span class="tag-soal tag-literasi">Literasi</span>
+                <h3>Memahami Ide Pokok</h3>
+                <p>Kumpulan teks berita dan artikel ilmiah untuk melatih kemampuan menentukan ide pokok paragraf.</p>
+                <div class="info-soal">
+                    <span class="jml-soal"><i class="bi bi-list-check"></i> 10 Soal</span>
+                    <a href="#" class="btn-kerjakan">Mulai</a>
+                </div>
+            </article>
+
+            <article class="soal-card">
+                <span class="tag-soal tag-numerasi">Numerasi</span>
+                <h3>Aritmetika Sosial</h3>
+                <p>Soal cerita bertema ekonomi: Menghitung diskon, bunga tunggal, pajak, dan keuntungan dagang.</p>
+                <div class="info-soal">
+                    <span class="jml-soal"><i class="bi bi-list-check"></i> 12 Soal</span>
+                    <a href="#" class="btn-kerjakan">Mulai</a>
+                </div>
+            </article>
+
+            <article class="soal-card">
+                <span class="tag-soal tag-literasi">Literasi</span>
+                <h3>Interpretasi Puisi</h3>
+                <p>Menganalisis makna kiasan dan amanat dalam karya sastra puisi kontemporer.</p>
+                <div class="info-soal">
+                    <span class="jml-soal"><i class="bi bi-list-check"></i> 5 Soal</span>
+                    <a href="#" class="btn-kerjakan">Mulai</a>
+                </div>
+            </article>
+        </section>
+
+        <div style="text-align: center; margin: 60px 0;">
+            <a href="index.html" class="cta-button" style="background: var(--text-dark);">
+                <i class="bi bi-arrow-left"></i> Kembali ke Beranda
+            </a>
+        </div>
+    </main>
+
+    <script>
+        function searchSoal() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('soal-card');
+            
+            for (let i = 0; i < cards.length; i++) {
+                let title = cards[i].querySelector('h3').innerText.toLowerCase();
+                let desc = cards[i].querySelector('p').innerText.toLowerCase();
+                
+                if (title.includes(input) || desc.includes(input)) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+    
+    <footer>
+        © 2026 . Portal Digital Kampus Mengajar . SMPN 27 Makassar
+    </footer>
+</body>
+</html>

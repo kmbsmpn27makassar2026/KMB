@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PROFIL MAHASISWA - Kampus Mengajar SMPN 27 Makassar</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        /* Tambahan style khusus untuk halaman profil agar lebih rapi */
+        .main-header-blue {
+            background-color: #1a4a7a; /* Warna biru navy profesional */
+            height: 250px;             /* Sedikit diperpendek agar lebih rapat */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+            width: 100%;
+        }
+
+        .hero-content .title {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #f5e6ca;
+            font-weight: bold;
+        }
+
+        .hero-content .lead {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .student-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            padding-bottom: 20px;
+        }
+
+        .student-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .student-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background-color: #f0f0f0;
+        }
+
+        .student-info {
+            padding: 15px;
+        }
+
+        .student-info h3 {
+            margin: 10px 0 5px 0;
+            color: #2c3e50;
+        }
+
+        .student-info p {
+            margin: 0;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .badge-major {
+            display: inline-block;
+            background: #e1f5fe;
+            color: #0288d1;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+    </style>
+</head>
+<body>
+        <div class="logo-container">
+            <img src="images/logo_tutwuri.jpg" alt="Logo Tut Wuri Handayani" class="logo-dikbud">
+            <img src="images/logo_km.jpg" alt="Logo Kampus Mengajar" class="logo-km">
+            <img src="images/logo_UNM.jpg" alt="Logo Universitas" class="logo-univ">
+        </div>
+    </header>
+    <header class="main-header-blue">
+        <div class="hero-content">
+            <h1 class="title">Profil Tim Mahasiswa</h1>
+            <p class="lead">Mengenal lebih dekat para mahasiswa yang bertugas di SMPN 27 Makassar.</p>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 20px;">
+        <section class="card">
+            <h2>Anggota Tim Kampus Mengajar</h2>
+            <p>Seluruh mahasiswa dalam tim ini berasal dari program studi <strong>Pendidikan Matematika</strong> yang berfokus pada penguatan numerasi siswa.</p>
+
+            <div class="profile-grid">
+                <article class="student-card">
+                    <img src="images/Putri.jpeg" alt="Foto Mahasiswa" class="student-img">
+                    <div class="student-info">
+                        <h3>Putri Amelia Kartika.K</h3>
+                        <p>Universitas Negeri Makassar</p>
+                        <span class="badge-major">Pendidikan Matematika</span>
+                        <p style="margin-top: 10px; font-style: italic;">"Bertanggung jawab atas pengelolaan perpustakaan digital."</p>
+                    </div>
+                </article>
+
+                <article class="student-card">
+                    <img src="images/Nisa.jpeg" alt="Foto Mahasiswa" class="student-img">
+                    <div class="student-info">
+                        <h3>Tri Annisa Risyam</h3>
+                        <p>Universitas Negeri Makassar</p>
+                        <span class="badge-major">Pendidikan Matematika</span>
+                        <p style="margin-top: 10px; font-style: italic;">"Membantu penguatan literasi dan adaptasi teknologi."</p>
+                    </div>
+                </article>
+
+                <article class="student-card">
+                    <img src="images/Rifqah.jpeg" alt="Foto Mahasiswa" class="student-img">
+                    <div class="student-info">
+                        <h3>Rifqah Meilani</h3>
+                        <p>Universitas Negeri Makassar</p>
+                        <span class="badge-major">Pendidikan Matematika</span>
+                        <p style="margin-top: 10px; font-style: italic;">"Fokus pada inovasi media pembelajaran numerasi."</p>
+                    </div>
+                </article>
+
+                <article class="student-card">
+                    <img src="images/Fitrah.jpeg" alt="Foto Mahasiswa" class="student-img">
+                    <div class="student-info">
+                        <h3>Nurfitrah Nurdin</h3>
+                        <p>Universitas Negeri Makassar</p>
+                        <span class="badge-major">Pendidikan Matematika</span>
+                        <p style="margin-top: 10px; font-style: italic;">"Mengkoordinasi program pojok baca dan numerasi."</p>
+                    </div>
+                </article>
+
+                <article class="student-card">
+                    <img src="images/Nunu.jpeg" alt="Foto Mahasiswa" class="student-img">
+                    <div class="student-info">
+                        <h3>Nuzul Qur'ani</h3>
+                        <p>Universitas Negeri Makassar</p>
+                        <span class="badge-major">Pendidikan Matematika</span>
+                        <p style="margin-top: 10px; font-style: italic;">"Menyusun bank soal berbasis kemampuan berpikir kritis."</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="card" style="margin-top: 30px;">
+            <h3>Dosen Pembimbing Lapangan (DPL)2</h3>
+            <div style="display: flex; align-items: center; gap: 20px; margin-top: 15px;">
+                <i class="bi bi-person-workspace" style="font-size: 3rem; color: #0d6efd;"></i>
+                <div>
+                    <strong>Dr. Hisyam Ihsan, M.Si.</strong>
+                    <p>NIDN: 00XXXXXXXX <br> Instansi: Universitas Negeri Makassar</p>
+                </div>
+            </div>
+        </section>
+                <section class="card" style="margin-top: 30px;">
+            <h3>Dosen Pembimbing Lapangan (DPL) 2</h3>
+            <div style="display: flex; align-items: center; gap: 20px; margin-top: 15px;">
+                <i class="bi bi-person-workspace" style="font-size: 3rem; color: #0d6efd;"></i>
+                <div>
+                    <strong>Sahlan Sidraja, S.Si, M.Si.</strong>
+                    <p>NIDN: 00XXXXXXXX <br> Instansi: Universitas Negeri Makassar</p>
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin: 60px 0;">
+            <a href="index.html" class="cta-button" style="background: var(--text-dark);">
+                <i class="bi bi-arrow-left"></i> Kembali ke Beranda
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 . Portal Digital Kampus Mengajar . SMPN 27 Makassar . Dibuat dengan <i class="bi bi-heart-fill text-danger"></i> oleh Mahasiswa Kampus Mengajar.
+    </footer>
+</body>
+</html>

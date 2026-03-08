@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pusat Numerasi - SMPN 27 Makassar</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --accent-green: #27ae60;
+            --accent-orange: #e67e22;
+        }
+        
+        /* Layouting Grid */
+        .numerasi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        /* Styling Kartu Alat Peraga */
+        .tool-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .tool-card:hover { transform: translateY(-5px); }
+        
+        .tool-img-placeholder {
+            height: 180px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .tool-content { padding: 25px; flex-grow: 1; }
+        
+        /* Badge Kategori */
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .tag-geo { background: #e3f2fd; color: #1976d2; }
+        .tag-alg { background: #f3e5f5; color: #7b1fa2; }
+        .tag-stat { background: #e8f5e9; color: #2e7d32; }
+
+        /* Section Soal Kontekstual */
+        .problem-container {
+            background: #fdfdfd;
+            border: 2px dashed var(--warm-cream);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .problem-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            border-left: 5px solid var(--secondary-blue);
+        }
+
+        /* Tabel Kurikulum */
+        .numerasi-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .numerasi-table th, .numerasi-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .numerasi-table th { background: var(--primary-blue); color: white; }
+
+        .btn-download {
+            background: var(--accent-green);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header" style="height: 350px;">
+        <img src="images/sampul.jpg" alt="Numerasi Header" class="main-hero-img" style="height: 350px;"/>
+        <div class="hero">
+            <h1 class="title">Eksplorasi Numerasi & Alat Peraga</h1>
+            <p class="lead">Membangun logika matematika yang kontekstual, kreatif, dan menyenangkan di SMPN 27 Makassar.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2><i class="bi bi-compass"></i> Filosofi Numerasi</h2>
+            <p>Numerasi bukan sekadar berhitung, melainkan kemampuan mengaplikasikan konsep angka dalam situasi nyata. Di SMPN 27 Makassar, kami menggunakan pendekatan <strong>CPA (Concrete-Pictorial-Abstract)</strong> untuk membantu siswa memahami matematika dari benda nyata menuju simbol abstrak.</p>
+        </section>
+
+        <section style="margin-top: 50px;">
+            <div class="problem-container">
+                <h2 style="color: var(--primary-blue);"><i class="bi bi-chat-right-quote"></i> Bank Soal Kontekstual (AKM)</h2>
+                <p>Kumpulan persoalan berbasis kehidupan sehari-hari siswa di Makassar.</p>
+                
+                <div class="problem-item">
+                    <span class="tag tag-geo">Level: Kelas VII</span>
+                    <p><strong>Kasus 1 (Belanja di Pasar Terong):</strong> Andi diminta ibunya membeli 2kg bawang merah. Harga normal adalah Rp35.000/kg. Toko memberikan diskon 10% jika membeli minimal 2kg. Hitunglah kembalian Andi jika ia membawa uang Rp100.000!</p>
+                </div>
+
+                <div class="problem-item">
+                    <span class="tag tag-stat">Level: Kelas IX</span>
+                    <p><strong>Kasus 2 (Parkir Sekolah):</strong> Di parkiran SMPN 27 terdapat 40 kendaraan yang terdiri dari motor dan mobil. Jika total roda adalah 100, hitunglah berapa banyak mobil yang ada menggunakan sistem persamaan linear!</p>
+                </div>
+
+                <div class="problem-item">
+                    <span class="tag tag-alg">Level: Kelas VIII</span>
+                    <p><strong>Kasus 3 (Tarif Ojek Online):</strong> Tarif ojek online dari sekolah ke Pantai Losari mengikuti rumus $f(x) = 2.000x + 5.000$. Jika jarak tempuh $x = 8$ km, tentukan total biaya yang harus dibayar siswa!</p>
+                </div>
+
+                <div style="text-align: right;">
+                    <a href="#" class="btn-download"><i class="bi bi-file-earmark-pdf"></i> Unduh Semua Bank Soal</a>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: 50px;">
+            <h2 style="color: var(--primary-blue); border-bottom: 2px solid var(--warm-cream); padding-bottom: 10px;">
+                <i class="bi bi-tools"></i> Katalog Alat Peraga Kreatif
+            </h2>
+            
+            <div class="numerasi-grid">
+                <article class="tool-card">
+                    <div class="tool-img-placeholder">
+                        <i class="bi bi-image" style="font-size: 2rem;"></i>
+                        </div>
+                    <div class="tool-content">
+                        <span class="tag tag-geo">Geometri</span>
+                        <h3>Ular Tangga Luas Bangun</h3>
+                        <p>Permainan interaktif di mana setiap petak berisi tantangan menghitung luas bangun datar untuk memajukan pion.</p>
+                        <p><small><strong>Alat/Bahan:</strong> Banner bekas, spidol, dadu raksasa.</small></p>
+                    </div>
+                </article>
+
+                <article class="tool-card">
+                    <div class="tool-img-placeholder">
+                        <i class="bi bi-image" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="tool-content">
+                        <span class="tag tag-alg">Bilangan</span>
+                        <h3>Papan Jurang Positif-Negatif</h3>
+                        <p>Visualisasi garis bilangan menggunakan kelereng untuk memahami konsep penjumlahan dan pengurangan bilangan bulat.</p>
+                        <p><small><strong>Alat/Bahan:</strong> Papan kayu/stirofoam, kelereng, cat warna.</small></p>
+                    </div>
+                </article>
+
+                <article class="tool-card">
+                    <div class="tool-img-placeholder">
+                        <i class="bi bi-image" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="tool-content">
+                        <span class="tag tag-stat">Statistika</span>
+                        <h3>Spinner Peluang</h3>
+                        <p>Roda berputar untuk melakukan eksperimen frekuensi harapan secara langsung di depan kelas.</p>
+                        <p><small><strong>Alat/Bahan:</strong> Kardus, paku payung, kertas asturo.</small></p>
+                    </div>
+                </article>
+
+                <article class="tool-card">
+                    <div class="tool-img-placeholder">
+                        <i class="bi bi-image" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="tool-content">
+                        <span class="tag tag-geo">Trigonometri</span>
+                        <h3>Klinometer Sederhana</h3>
+                        <p>Alat untuk mengukur tinggi pohon atau tiang bendera sekolah menggunakan konsep perbandingan sudut.</p>
+                        <p><small><strong>Alat/Bahan:</strong> Busur derajat, sedotan, benang, pemberat.</small></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="card" style="margin-top: 50px;">
+            <h3>Target Capaian Numerasi</h3>
+            <table class="numerasi-table">
+                <thead>
+                    <tr>
+                        <th>Kelas</th>
+                        <th>Topik Utama</th>
+                        <th>Metode Pembelajaran</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Kelas VII</td>
+                        <td>Bilangan Bulat & Rasio</td>
+                        <td>Media Visual (Papan Bilangan)</td>
+                    </tr>
+                    <tr>
+                        <td>Kelas VIII</td>
+                        <td>Persamaan Linear & Teorema Pythagoras</td>
+                        <td>Eksperimen Luar Ruas (Klinometer)</td>
+                    </tr>
+                    <tr>
+                        <td>Kelas IX</td>
+                        <td>Bangun Ruang & Peluang</td>
+                        <td>Pembuatan Model 3D (Kardus Bekas)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div style="text-align: center; margin: 60px 0;">
+            <a href="index.html" class="cta-button" style="background: var(--text-dark);">
+                <i class="bi bi-arrow-left"></i> Kembali ke Beranda
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 . Portal Digital Kampus Mengajar . SMPN 27 Makassar . Berdedikasi untuk Literasi & Numerasi.
+    </footer>
+</body>
+</html>
