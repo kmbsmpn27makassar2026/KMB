@@ -112,6 +112,34 @@
             font-weight: 500;
             font-size: 0.9rem;
         }
+
+        /* Filter Container */
+        .filter-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .btn-filter {
+            padding: 10px 20px;
+            margin: 5px;
+            border: 2px solid #0d6efd;
+            background: transparent;
+            color: #0d6efd;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-filter.active, .btn-filter:hover {
+            background: #0d6efd;
+            color: white;
+        }
+
+        /* Logic untuk menyembunyikan video */
+        .video-card.hide {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -123,26 +151,251 @@
     </header>
 
     <main class="video-section">
+        <div class="filter-container">
+            <button class="btn-filter active" onclick="filterVideo('all')">Semua Video</button>
+            <button class="btn-filter" onclick="filterVideo('7')">Kelas 7</button>
+            <button class="btn-filter" onclick="filterVideo('8')">Kelas 8</button>
+            <button class="btn-filter" onclick="filterVideo('9')">Kelas 9</button>
+            <button class="btn-filter" onclick="filterVideo('Dokumenatasi Proker')">Dokumentasi Proker</button>
+        </div>
+
         <div class="video-container">
-            <article class="video-card">
-                <iframe class="video-frame" src="https://www.youtube.com/embed/ID_VIDEO_1"></iframe>
+            <article class="video-card" data-class="7">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/xmB1SHAdu-Q?si=n6ga_suDENW6NdUS"></iframe>
                 <div class="video-body">
-                    <h3>Konsep Numerasi Dasar</h3>
-                    <p>Penjelasan strategi penyelesaian soal numerasi secara cepat dan tepat.</p>
-                    <a href="#" class="btn-play">Putar Video</a>
+                    <h3>Bilangan Bulat</h3>
+                    <p>Video ini berisikan materi Matematika Kelas 7 : Bilangan Bulat.</p>
+                    <a href="https://youtu.be/xmB1SHAdu-Q?si=n6ga_suDENW6NdUS" class="btn-play">Putar Video</a>
                 </div>
             </article>
 
-            <article class="video-card">
-                <iframe class="video-frame" src="https://www.youtube.com/embed/ID_VIDEO_2"></iframe>
+            <article class="video-card" data-class="7">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/riNKfctvLXc?si=S4sUkjMAVBo-1yIi"></iframe>
                 <div class="video-body">
-                    <h3>Geometri Interaktif</h3>
-                    <p>Visualisasi bangun ruang menggunakan media alat peraga kreatif.</p>
-                    <a href="#" class="btn-play">Putar Video</a>
+                    <h3>Bilangan Pecahan</h3>
+                    <p>Video ini berisikan materi Matematika Kelas 7: Bilangan Pecahan.</p>
+                    <a href="https://youtu.be/riNKfctvLXc?si=S4sUkjMAVBo-1yIi" class="btn-play">Putar Video</a>
                 </div>
             </article>
 
-            <article class="video-card">
+            <article class="video-card" data-class="7">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/ImejDID9PtM?si=-83oCE_MLB51e-Q2"></iframe>
+                <div class="video-body">
+                    <h3>Bilangan Berpangkat</h3>
+                    <p>Video ini berisikan materi Matematika Kelas 7: Bilangan Berpangkat.</p>
+                    <a href="https://youtu.be/ImejDID9PtM?si=-83oCE_MLB51e-Q2" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+
+            <article class="video-card" data-class="7">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/6gdoqxXsleg?si=a8YbPpyaVB-EEPz0"></iframe>
+                <div class="video-body">
+                    <h3>KPK dan FBP</h3>
+                    <p>Video ini berisikan materi Matematika Kelas 7: KPK dan FPB.</p>
+                    <a href="https://youtu.be/6gdoqxXsleg?si=a8YbPpyaVB-EEPz0" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+
+            <article class="video-card" data-class="7">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/fVgfvcrfdVs?si=18uv_imrfDX9UvGz"></iframe>
+                <div class="video-body">
+                    <h3>Himpunan</h3>
+                    <p>Video ini berisikan materi Matematika Kelas 7: Himpunan.</p>
+                    <a href="https://youtu.be/fVgfvcrfdVs?si=18uv_imrfDX9UvGz" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+
+            <article class="video-card" data-class="7">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/CknTTn84C9g?si=SECKb6bWLq59rZTx"></iframe>
+                <div class="video-body">
+                    <h3>Bentuk Aljabar</h3>
+                    <p>Video ini berisikan pembahasan Materi Matematika Kelas 7: Bentuk Aljabar.</p>
+                    <a href="https://youtu.be/CknTTn84C9g?si=SECKb6bWLq59rZTx" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+
+            <article class="video-card" data-class="7">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/Z3xl0VF7gy4?si=o5Cts-Ck7T1joJ4p"></iframe>
+                <div class="video-body">
+                    <h3>Persamaan Linear Satu Variabel</h3>
+                    <p>Video ini berisikan materi Matematika Kelas 7: Persamaan Linear Satu Variabel.</p>
+                    <a href="https://youtu.be/Z3xl0VF7gy4?si=o5Cts-Ck7T1joJ4p" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+
+            <article class="video-card" data-class="7">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/BKLNIbLZWIU?si=VwxxL5U2v1BkG74c"></iframe>
+                <div class="video-body">
+                    <h3>Pertidaksamaan Linear Satu Variabel</h3>
+                    <p>Video ini berisikan materi Matematika Kelas 7: Pertidaksamaan Linear Satu Variabel.</p>
+                    <a href="https://youtu.be/BKLNIbLZWIU?si=VwxxL5U2v1BkG74c" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+
+            <article class="video-card" data-class="7">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/-I8hztM_LV4?si=KPDvwkjbOdN3whzr"></iframe>
+                <div class="video-body">
+                    <h3>Perbandingan (Senilai dan Berbalik Nilai)</h3>
+                    <p>ideo ini berisikan materi Matematika Kelas 7: Perbandingan Senilai dan Berbalik Nilai.</p>
+                    <a href="https://youtu.be/-I8hztM_LV4?si=KPDvwkjbOdN3whzr" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+            
+            <article class="video-card" data-class="7">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/d_pu3O6xKig?si=QV2x-h3YkHIrGMOO"></iframe>
+                <div class="video-body">
+                    <h3>Rasio</h3>
+                    <p>Video ini berisikan pembahasan Materi Matematika Kelas 7: Rasio.</p>
+                    <a href="https://youtu.be/d_pu3O6xKig?si=QV2x-h3YkHIrGMOO" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+            
+            <article class="video-card" data-class="7">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/m79K1rDInl4?si=eycM_rcy1nBEa53H"></iframe>
+                <div class="video-body">
+                    <h3>Aritmatika Sosial</h3>
+                    <p>Video ini berisikan pembahasan Materi Matematika Kelas 7: Aritmatika Sosial.</p>
+                    <a href="https://youtu.be/m79K1rDInl4?si=3W1ewyIto4_tKGIW" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+            
+            <article class="video-card" data-class="7">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/5ZSzdZn3GhY?si=vtYwEFOm0ozJSZhe"></iframe>
+                <div class="video-body">
+                    <h3>Bunga Tunggal, Diskon, dan Pajak</h3>
+                    <p>Video ini berisikan pembahasan Materi Matematika Kelas 7: Bunga Tunggal, Diskon, dan Pajak.</p>
+                    <a href="https://youtu.be/5ZSzdZn3GhY?si=vtYwEFOm0ozJSZhe" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+            
+            <article class="video-card" data-class="7">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/klaBvXovrg8?si=-HD7A4AqX0iTu4DU"></iframe>
+                <div class="video-body">
+                    <h3>Bruto, Netto, dan Tara</h3>
+                    <p>Video ini berisikan pembahasan Materi Matematika Kelas 7: Bruto, Netto, dan Tara.</p>
+                    <a href="https://youtu.be/klaBvXovrg8?si=-HD7A4AqX0iTu4DU" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+
+            <article class="video-card" data-class="7">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/_vmaVr4QKYE?si=bqspIUH0oyQaJsAb"></iframe>
+                <div class="video-body">
+                    <h3>Garis dan Sudut</h3>
+                    <p>Video ini berisikan pembahasan Materi Matematika Kelas 7: Garis dan Sudut.</p>
+                    <a href="https://youtu.be/_vmaVr4QKYE?si=bqspIUH0oyQaJsAb" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+
+            <article class="video-card" data-class="7">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/1sW_W3MsAJ0?si=1V7Gnzl19edNEjlh"></iframe>
+                <div class="video-body">
+                    <h3>Segitiga dan Segiempat</h3>
+                    <p>Video ini berisikan pembahasan Materi Matematika Kelas 7: Segitiga dan Segiempat.</p>
+                    <a href="https://youtu.be/1sW_W3MsAJ0?si=1V7Gnzl19edNEjlh" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+
+            <article class="video-card" data-class="7">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/t3O3AeBnELs?si=mWBYkaaj6KHq5aQA"></iframe>
+                <div class="video-body">
+                    <h3>Penyajian data</h3>
+                    <p>Video ini berisikan pembahasan Materi Matematika Kelas 7: Penyajian Data.</p>
+                    <a href="https://youtu.be/t3O3AeBnELs?si=mWBYkaaj6KHq5aQA" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+
+            <article class="video-card" data-class="8">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/jY75YhGwwUs?si=1YYHZcGGWg5vRb0_"></iframe>
+                <div class="video-body">
+                    <h3>Pola Bilangan</h3>
+                    <p>Video ini berikan pembahasan Materi Matematika Kelas 8: Pola Bilangan.</p>
+                    <a href="https://youtu.be/jY75YhGwwUs?si=1YYHZcGGWg5vRb0_" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+
+            <article class="video-card" data-class="8">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/GI1QuwrfBkc?si=JHvO1rlPzHHktZ1V"></iframe>
+                <div class="video-body">
+                    <h3>Koordinat Kartesius</h3>
+                    <p>Video ini berikan pembahasan Materi Matematika Kelas 8: Koordinat Kartesius.</p>
+                    <a href="https://youtu.be/GI1QuwrfBkc?si=JHvO1rlPzHHktZ1V" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+
+            <article class="video-card" data-class="8">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/Ab6xdGESxeI?si=n7WBXgBu0M6Spnrj"></iframe>
+                <div class="video-body">
+                    <h3>Relasi dan Fungsi</h3>
+                    <p>Video ini berikan pembahasan Materi Matematika Kelas 8: Relasi dan Fungsi.</p>
+                    <a href="https://youtu.be/Ab6xdGESxeI?si=n7WBXgBu0M6Spnrj" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+
+            <article class="video-card" data-class="8">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/puSBmu9T2wg?si=Fj0TXl2sL5YTyiO9"></iframe>
+                <div class="video-body">
+                    <h3>Persamaan Garis Lurus</h3>
+                    <p>Video ini berikan pembahasan Materi Matematika Kelas 8: Persamaan Garis Lurus.</p>
+                    <a href="https://youtu.be/puSBmu9T2wg?si=Fj0TXl2sL5YTyiO9" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+
+            <article class="video-card" data-class="8">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/qU1Yf7CfXSo?si=56khlMRmwIFj14bL"></iframe>
+                <div class="video-body">
+                    <h3>Sistem Persamaan Linear Dua Variabel</h3>
+                    <p>Video ini berikan pembahasan Materi Matematika Kelas 8: Sistem Persamaan Linear Dua Variabel.</p>
+                    <a href="https://youtu.be/qU1Yf7CfXSo?si=56khlMRmwIFj14bL" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+
+            <article class="video-card" data-class="8">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/m2WNFMvFinY?si=j-t8sRKX2M3yV8Z_"></iframe>
+                <div class="video-body">
+                    <h3>Teorema Pythagoras</h3>
+                    <p>Video ini berikan pembahasan Materi Matematika Kelas 8: Teorema Pythagoras.</p>
+                    <a href="https://youtu.be/m2WNFMvFinY?si=j-t8sRKX2M3yV8Z_" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+
+            <article class="video-card" data-class="8">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/4uLWCDEubDM?si=BoLQyzwODqoDlX2G"></iframe>
+                <div class="video-body">
+                    <h3>Lingkaran</h3>
+                    <p>Video ini berikan pembahasan Materi Matematika Kelas 8: Lingkaran.</p>
+                    <a href="https://youtu.be/4uLWCDEubDM?si=BoLQyzwODqoDlX2G" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+
+            <article class="video-card" data-class="8">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/e9puyQX8x_k?si=bTDTHHvmGYUINzNB"></iframe>
+                <div class="video-body">
+                    <h3>Bangun Ruang Sisi Datar</h3>
+                    <p>Video ini berikan pembahasan Materi Matematika Kelas 8: Bangun Ruang Sisi Datar (Kubus, Balok, Prisma, dan Limas).</p>
+                    <a href="https://youtu.be/e9puyQX8x_k?si=bTDTHHvmGYUINzNB" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+            </article>
+
+            <article class="video-card" data-class="8">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/JryYK-YUKxk?si=aiUfr2EkiUpcpMOj"></iframe>
+                <div class="video-body">
+                    <h3>Satistika</h3>
+                    <p>Video ini berikan pembahasan Materi Matematika Kelas 8: Statistika (Mean, Median, Modus, Kuartil, Jangkauan).</p>
+                    <a href="https://youtu.be/JryYK-YUKxk?si=aiUfr2EkiUpcpMOj" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+
+            <article class="video-card" data-class="8">
+                <iframe class="video-frame" src="https://www.youtube.com/embed/nTp0F_mLB7Y?si=VVCZxeT7bzXUh-73"></iframe>
+                <div class="video-body">
+                    <h3>Peluang</h3>
+                    <p>Video ini berikan pembahasan Materi Matematika Kelas 8: Peluang.</p>
+                    <a href="https://youtu.be/nTp0F_mLB7Y?si=VVCZxeT7bzXUh-73" class="btn-play">Putar Video</a>
+                </div>
+            </article>
+
+            <article class="video-card" data-class="Dokumentasi Proker">
                 <iframe class="video-frame" src="https://www.youtube.com/embed/ID_VIDEO_3"></iframe>
                 <div class="video-body">
                     <h3>Dokumentasi Proker</h3>
@@ -157,6 +410,36 @@
             </a>
         </div>
     </main>
+    
+    <script>
+        function filterVideo(className) {
+            const cards = document.querySelectorAll('.video-card');
+            const buttons = document.querySelectorAll('.btn-filter');
+
+            // Atur aktif/tidaknya tombol
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.innerText.includes(className) || (className === 'all' && btn.innerText.includes('Semua'))) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Filter kartu video
+            cards.forEach(card => {
+                const cardClass = card.getAttribute('data-class');
+                
+                if (className === 'all') {
+                    card.classList.remove('hide');
+                } else {
+                    if (cardClass === className) {
+                        card.classList.remove('hide');
+                    } else {
+                        card.classList.add('hide');
+                    }
+                }
+            });
+        }
+    </script>
 
     <footer>
         © 2026 . Portal Digital Kampus Mengajar . SMPN 27 Makassar
